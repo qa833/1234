@@ -1,4 +1,1 @@
-dist: focal
-install: skip
-script:
-- uname -a
+dist: xenial
