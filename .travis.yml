@@ -3,8 +3,9 @@ install: skip
 script:
 - uname -a
 # - sudo apt update
-- sudo dpkg -l | grep kvm
-- sudo id kvm
+# - sudo dpkg -l | grep kvm
+# - sudo id kvm
+- sudo cat /etc/group
 
 
 jobs:
