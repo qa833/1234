@@ -14,15 +14,15 @@ jobs:
     - dist: xenial
       group: edge
       script:
-      - sudo ls /opt
+      - sudo ls /opt/at12.0/bin/
       - /opt/at12.0/bin/gccgo version
     - dist: bionic
       group: edge
       script: 
-      - sudo ls /opt
+      - sudo ls /opt/at14.0/bin/
       - /opt/at14.0/bin/gccgo version
     - dist: focal
       group: dev
       script: 
-      - sudo ls /opt
+      - sudo ls /opt/at14.0/bin/
       - /opt/at14.0/bin/gccgo version
