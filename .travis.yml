@@ -1,15 +1,18 @@
 dist: xenial
 install: skip
 script:
-- uname -a
+# - uname -a
 # - sudo apt update
 # - sudo dpkg -l | grep kvm
 # - sudo id kvm
-- sudo cat /etc/group
+- sudo ls /opt
 
 
 jobs:
   include:
     - dist: xenial
+      group: dev
     - dist: bionic
+      group: dev
     - dist: focal
+      group: dev
