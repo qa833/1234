@@ -12,8 +12,17 @@ script:
 jobs:
   include:
     - dist: xenial
-      group: dev
+      group: edge
+      script:
+      - sudo ls /opt
+      - /opt/at12.0/bin/gccgo version
     - dist: bionic
-      group: dev
+      group: edge
+      script: 
+      - sudo ls /opt
+      - /opt/at14.0/bin/gccgo version
     - dist: focal
       group: dev
+      script: 
+      - sudo ls /opt
+      - /opt/at14.0/bin/gccgo version
