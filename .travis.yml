@@ -15,14 +15,14 @@ jobs:
       group: edge
       script:
       - sudo ls /opt/at12.0/bin/
-      - /opt/at12.0/bin/gccgo version
+      - /opt/at12.0/bin/powerpc64le-linux-gnu-gccgo version
     - dist: bionic
       group: edge
       script: 
       - sudo ls /opt/at14.0/bin/
-      - /opt/at14.0/bin/gccgo version
+      - /opt/at14.0/bin/powerpc64le-linux-gnu-gccgo version
     - dist: focal
       group: dev
       script: 
       - sudo ls /opt/at14.0/bin/
-      - /opt/at14.0/bin/gccgo version
+      - /opt/at14.0/bin/powerpc64le-linux-gnu-gccgo version
