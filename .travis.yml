@@ -1,5 +1,6 @@
 dist: xenial
 install: skip
+group: dev
 script:
 # - uname -a
 # - sudo apt update
