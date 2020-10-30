@@ -1,28 +1,35 @@
-dist: xenial
-install: skip
+# language: c++
+language: minimal
 group: dev
+  
 script:
-# - uname -a
-# - sudo apt update
-# - sudo dpkg -l | grep kvm
-# - sudo id kvm
-- sudo ls /opt
-
+- sudo cat /etc/hosts
+- sudo ls
+- sudo cat /etc/cloud/cloud.cfg
+- sudo sleep 600
 
 jobs:
   include:
-    - dist: xenial
-      group: edge
-      script:
-      - sudo ls /opt/at12.0/bin/
-      - /opt/at12.0/bin/powerpc64le-linux-gnu-gccgo version
-    - dist: bionic
-      group: edge
-      script: 
-      - sudo ls /opt/at14.0/bin/
-      - /opt/at14.0/bin/powerpc64le-linux-gnu-gccgo version
-    - dist: focal
-      group: dev
-      script: 
-      - sudo ls /opt/at14.0/bin/
-      - /opt/at14.0/bin/powerpc64le-linux-gnu-gccgo version
+  - dist: xenial-amd
+    arch: amd64
+  - dist: xenial
+    arch: ppc64le
+    #group: edge
+    #group: dev
+#     script:
+#       - /opt/at12.0/bin/g++ hello_world.cpp -o hello_world
+#       - ./hello_world
+  - dist: bionic
+    arch: ppc64le
+    #group: edge
+    #group: dev
+#     script:
+#       - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
+#       - ./hello_world
+  - dist: focal
+    arch: ppc64le
+    #group: edge
+    #group: dev
+#     script:
+#       - /opt/at14.0/bin/g++ hello_world.cpp -o hello_world
+#       - ./hello_world
