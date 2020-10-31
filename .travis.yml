@@ -13,6 +13,7 @@ jobs:
   include:
   - dist: xenial-amd
     arch: amd64
+    virt: lxd
   - dist: xenial
     arch: ppc64le
     #group: edge
