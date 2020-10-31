@@ -1,6 +1,6 @@
 # language: c++
 # language: minimal
-language: ruby
+language: generic
 group: dev
   
 script:
