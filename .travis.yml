@@ -11,6 +11,9 @@ script:
 
 jobs:
   include:
+  - dist: xenial-arm
+    arch: arm64
+    virt: lxd
   - dist: xenial-amd
     arch: amd64
     virt: lxd
