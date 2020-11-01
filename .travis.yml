@@ -11,10 +11,22 @@ script:
 
 jobs:
   include:
-  - dist: xenial-arm
+  - dist: xenial
     arch: arm64
     virt: lxd
-  - dist: xenial-amd
+  - dist: bionic
+    arch: arm64
+    virt: lxd
+  - dist: focal
+    arch: arm64
+    virt: lxd
+  - dist: xenial
+    arch: amd64
+    virt: lxd
+  - dist: bionic
+    arch: amd64
+    virt: lxd
+  - dist: focal
     arch: amd64
     virt: lxd
   - dist: xenial
